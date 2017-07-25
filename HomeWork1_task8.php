@@ -1,32 +1,15 @@
-<?php
-
-// домашнее задание №1 - задание №7
-
-//Объявляем переменные
-$str = "Ура последнее задание";
-
-
-//Балуемся со строкой
-echo "<p> $str <p/>";
-$arr_explode = explode(" ", $str);
-foreach ($arr_explode as $tmp) {
-    echo "$tmp ";
-}
-$result = [];
-foreach ($arr_explode as &$tmp) 
-{
-    $res_str = "";
-    $a = 0;
-    $b = strlen($tmp)-1;
-    do {
-        $scrum = $tmp[$a];
-        $tmp[$a] = $tmp[$b];
-        $tmp[$b] = $scrum;
-        $b--;
-        $a++;
-    } while ($a <= $b);
-    $result[] = $tmp;
-}
-
-$arr_explode = implode("*", $result);
-echo "<p>" .$arr_explode. "<p/>";
+﻿<?php
+    #Задание 1 пункт 8
+    $Data = "Ура последнее задание";
+    echo $Data;
+    $DataExplode = explode(' ', $Data);
+    $i = 0;
+    while ($i < count($DataExplode)/ 2) {
+   $tmp = $DataExplode[$i];
+   $DataExplode[$i] = $DataExplode[count($DataExplode) - $i - 1];
+   $DataExplode[count($DataExplode) - $i - 1] = $tmp;
+   $i++;
+}    
+    $Datareverse = implode('$nbsp', $DataExplode);
+    echo '<hr>';
+    echo $Datareverse;
