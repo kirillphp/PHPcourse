@@ -9,4 +9,3 @@ $pencil = 23; // рисунки, нарисованные карандашами
 $paint = $allpicture - ($marker + $pencil); 
 
 echo "<p> $paint рисунков, нарисовано красками</p>";
-?>

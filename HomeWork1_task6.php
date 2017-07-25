@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 // домашнее задание №1 - задание №6
 
@@ -9,11 +9,9 @@ $opel = ["name" => "Opel", "model" => "vectra", "speed" => 90, "doors" => 4, "ye
 $Arr = [];
 $Arr = [$bmw, $toyota, $opel];
 
-// Выводим сообщения по моделям авто
-for ($tmp = 0; $tmp < count($Arr); $tmp++) {
-    echo "<p> CAR {$Arr[$tmp]["name"]}<p/>";
-    foreach ($Arr[$tmp] as $v) {
-        echo "$v ";
-    }
-    echo "<p/>";
-}
+	foreach($Arr as $key => $value){
+		echo "<p>car</p>" ;
+		foreach($value as $key=>$value){
+			 echo $value . " " ;
+		}
+	}
